@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+</body>
+<p style="border-width:0px; padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:8px; list-style:none; text-indent:2em"><label for="wheelDelta"> 滚动值:</label>(IE/Opera)<input type="text" id="wheelDelta" style="border-width:0px; padding-top:0px; padding-bottom:0px; margin:0px; list-style:none"></p>
+<p style="border-width:0px; padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:8px; list-style:none; text-indent:2em"><label for="detail"> 滚动值:(Firefox)</label><input type="text" id="detail" style="border-width:0px; padding-top:0px; padding-bottom:0px; margin:0px; list-style:none"></p>
+<script type="text/javascript">
+    var taa=0;
+    var scrollFunc = function (e) {
+        var direct = 0;
+        ee = e || window.event;
+        var t1 = document.getElementById("wheelDelta");
+        var t2 = document.getElementById("detail");
+        if(e.wheelDelta){
+            if (e.wheelDelta<0) {//IE/Opera/Chrome
+                if(taa>=0&&taa<4){
+                    taa++;
+                    t1.value =taa;
+                }
+            }
+            else if(e.wheelDelta>0){
+                if(taa>0&&taa<=4){
+                    taa--;
+                    t1.value =taa;
+                }
+            }
+        } else if (e.detail) {//Firefox
+            t2.value = e.detail;
+        }
+        ScrollText(direct);
+    }
+    /*注册事件*/
+    if (document.addEventListener) {
+        document.addEventListener('DOMMouseScroll', scrollFunc, false);
+    }//W3C
+     document.onmousewheel= scrollFunc; //IE/Opera/Chrome/Safari
+    </script>
+</html>  

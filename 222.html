@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <meta charset="utf-8" />
+    <title>css两列布局，一边固定宽度，另一边自适应</title>
+</head>
+<style>
+    a, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, img, input, label, legend, li, mark, ol, p, section, span, strong, textarea, time, ul, var input{
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-style: normal;
+        color: #323232;
+        box-sizing: border-box;
+        -moz-box-sizing:border-box; /* Firefox */
+        -webkit-box-sizing:border-box; /* Safari */
+    }
+    .right{
+        width:200px;
+        float:right;
+        border:1px solid black;
+        height:auto;
+        min-height: 200px;
+    }
+    .left{
+        width:auto;
+        border:1px solid red;
+        margin-right:200px;
+        height:auto;
+        min-height: 200px;
+    }
+    .left1{
+        float:left;width:200px;border:1px solid red;height:auto;min-height: 200px;
+    }
+    .right1{
+        height:auto;border:1px solid blue;width:auto;margin-left:200px;min-height: 200px;
+    }
+</style>
+
+<body>
+<div>
+    <div class="right">右边固定</div>
+    <div class="left">左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应左边自适应
+    </div>
+</div>
+
+<div style="margin-top: 10px;">
+    <div class="left1">
+        左边固定
+    </div>
+    <div class="right1">
+        右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应右边自适应
+    </div>
+</div>
+
+</body>
+
+</HTML>
